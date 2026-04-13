@@ -11,7 +11,7 @@ const hostName =process.env.HOSTNAME;
 
 
 import app from "./src/app.js";
-import { server } from "./soket/soket.js";
+import { server } from "./socket/socket.js";
 
 try {
     await mongodbConnection();

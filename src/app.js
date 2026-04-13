@@ -5,7 +5,7 @@ import morgan from "morgan";
 import authRouter from "./routers/auth.router.js";
 import userRouter from "./routers/user.router.js"
 import messageRouter from "./routers/message.routes.js"
-import { app } from "../soket/soket.js";
+import { app } from "../socket/socket.js";
 //console.log(express);
 
 
