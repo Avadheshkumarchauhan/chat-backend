@@ -32,11 +32,11 @@ const app = express();
         if(userId !=="undefined"){
             userSocketMap[userId]=socket.id;
     
-            console.log("UserId : ",userId);
-             console.log("socketId : ",socket?.id);
+            // console.log("UserId : ",userId);
+            //  console.log("socketId : ",socket?.id);
         }
         io.emit("getOnlineUsers",Object.keys(userSocketMap));
-        console.log(userSocketMap);   
+        //console.log(userSocketMap);   
         // io.emit("hello","Avadhesh")
         socket.on("disconnect",()=>{
             delete userSocketMap[userId];

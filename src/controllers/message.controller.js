@@ -87,8 +87,10 @@ const getMessage =async (req, res)=>{
         const  converSetion = await Chat.findOne({
             participants:{$all:[senderId,receiverId]}
         }).populate("message");
+                
         if(!converSetion?.message){
-            return new apiError(400,"Message not found");
+            //return new apiError(400,"Message not found");
+            return res.status(200).json(new apiResponse(200, []," Message is empty"));
         }
                
         return res.status(200).json(new apiResponse(200, converSetion?.message," Receive message successfully"));

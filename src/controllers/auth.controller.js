@@ -34,7 +34,7 @@ const signUp = async (req, res) =>{
             
         }
         const token =await user.generateToken();
-        console.log("token : ",token);
+        //console.log("token : ",token);
         
         if(!token){
             return new apiError(404,"Token is not exist")
@@ -73,7 +73,7 @@ const login = async(req,res )=>{
          return new apiError(401,"Password does not match");        
      }
      const token =await user.generateToken();
-     console.log("token : ",token);
+     //console.log("token : ",token);
      
      if(!token){
           return new apiError(404,"Token does not exist")
@@ -110,6 +110,4 @@ export {
     signUp,
     login,
     logOut,
-    
-
 }
